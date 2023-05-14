@@ -14,7 +14,6 @@ int main(void)
 {
     float fahrenheit, celsius;
 
-    while (1) {
     int user_choice;
     char input[10];
 
@@ -40,6 +39,5 @@ int main(void)
         default:
             printf("Invalid choice\n");
             break;
-        }
     }
 }
