@@ -39,5 +39,8 @@ int main(void)
         default:
             printf("Invalid choice\n");
             break;
+        }
+
+        return 0;
     }
-}
+
