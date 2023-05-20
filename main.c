@@ -10,6 +10,14 @@ float convert_to_fahrenheit(float celsius)
     return (celsius * 9 / 5) + 32;
 }
 
+void print_menu()
+{
+    printf("------------------Temperature Converter------------------\n");
+    printf("Press 1 if you want to convert from Fahrenheit to Celsius\n");
+    printf("Press 2 if you want to convert from Celsius to Fahrenheit\n");
+    printf("---------------------------------------------------------\n");
+}
+
 int main(void) 
 {
     float fahrenheit, celsius;
@@ -17,8 +25,7 @@ int main(void)
     int user_choice;
     char input[10];
 
-    printf("Press 1 if you want to convert from Fahrenheit to Celsius\n");
-    printf("Press 2 if you want to convert from Celsius to Fahrenheit\n");
+    print_menu();
 
     fgets(input, sizeof(input), stdin);
 
