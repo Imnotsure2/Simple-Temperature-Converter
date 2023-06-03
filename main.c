@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 float convert_to_celsius(float fahrenheit)
 {
@@ -8,6 +9,13 @@ float convert_to_celsius(float fahrenheit)
 float convert_to_fahrenheit(float celsius)
 {
     return (celsius * 9 / 5) + 32;
+}
+
+float get_user_input()
+{
+    char input[100];
+    fgets(input, sizeof(input), stdin);
+    return strtof(input, NULL);
 }
 
 void print_menu()
@@ -34,13 +42,13 @@ int main(void)
     switch (user_choice) {
         case 1:
             printf("Enter the temperature in fahrenheit: ");
-            scanf("%f", &fahrenheit);
+            fahrenheit = get_user_input();
             printf("The temperature in celsius is: %.2f\n", convert_to_celsius(fahrenheit));
             break;
 
         case 2:
             printf("Enter the temperature in celsius: ");
-            scanf("%f", &celsius);
+            celsius = get_user_input();
             printf("The temperature in fahrenheit is: %.2f\n", convert_to_fahrenheit(celsius));
             break;
         default:
@@ -48,6 +56,6 @@ int main(void)
             break;
         }
 
-        return 0;
-    }
+    return 0;
+}
 
